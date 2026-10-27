@@ -62,7 +62,32 @@ then refresh; the version appears under the **Versions** tab.
 4. **Run All**, then **Save Version → Save & Run All (Commit)**
 5. Verify all 23 charts render
 
-## 7. Troubleshooting
+## 7. Deploy / update from the command line (optional)
+
+Kaggle CLI **write** operations (pushing notebooks, versioning datasets) need a
+one-time interactive login — the static `kaggle.json` key only allows *reading*:
+
+```bash
+# one-time: opens your browser, log in as arulmariaagnes
+kaggle auth login
+
+# after login, these both work (metadata files are committed in this repo):
+kaggle datasets version -p datasets/ -m "updated CSV"     # update the dataset
+kaggle kernels push -p kaggle/                            # push/update the notebook
+```
+
+If you prefer not to use the CLI, update everything manually:
+
+**Update the dataset (new 20-column CSV):**
+1. Open https://www.kaggle.com/datasets/arulmariaagnes/cse-student-performance-1200
+2. Click **Update** (or Settings → data → replace file)
+3. Upload `datasets/cse_student_performance_1200.csv` (the 20-column version —
+   it replaces the older 22-column file)
+4. Save; the notebook input path stays the same
+
+**Push the notebook:** see §6 above.
+
+## 8. Troubleshooting
 
 | Error | Fix |
 |---|---|
@@ -73,7 +98,7 @@ then refresh; the version appears under the **Versions** tab.
 | UMAP cell slow | Normal on first run (numba compile); later versions are faster |
 | Want to restart clean | **Kernel → Restart & Clear Output**, then Run All |
 
-## 8. What NOT to do
+## 9. What NOT to do
 
 - ❌ Don't delete the path-fallback loader cell — it's what makes the notebook portable
 - ❌ Don't paste credentials/API keys anywhere in the notebook

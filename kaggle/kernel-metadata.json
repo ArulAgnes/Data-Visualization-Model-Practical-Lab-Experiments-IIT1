@@ -1,0 +1,16 @@
+{
+  "id": "arulmariaagnes/data-v",
+  "title": "Data Visualization Model Lab - Complete Practical Solutions",
+  "code_file": "data_visualization_complete_lab.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "dataset_sources": [
+    "arulmariaagnes/cse-student-performance-1200"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "kaggle_opt_in_version": 0
+}
