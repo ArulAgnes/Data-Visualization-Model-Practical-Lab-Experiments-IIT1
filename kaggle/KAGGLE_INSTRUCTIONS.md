@@ -76,6 +76,12 @@ kaggle datasets version -p datasets/ -m "updated CSV"     # update the dataset
 kaggle kernels push -p kaggle/                            # push/update the notebook
 ```
 
+> **Gotcha:** if a stale `KAGGLE_API_TOKEN` environment variable exists (this
+> machine had a 14-character one), it shadows the OAuth login and every
+> command fails with "Authentication required". Unset it for the session
+> (`$env:KAGGLE_API_TOKEN=$null` in PowerShell, `unset KAGGLE_API_TOKEN` in
+> bash) or delete the variable, then run the commands above.
+
 If you prefer not to use the CLI, update everything manually:
 
 **Update the dataset (new 20-column CSV):**
