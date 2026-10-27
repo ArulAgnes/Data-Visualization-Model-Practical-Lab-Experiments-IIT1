@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Kaggle credentials — NEVER COMMIT
+.kaggle/
+kaggle.json
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp
+*.tmp
+*.temp
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large files
+*.h5
+*.pkl
+*.model
+
+# --- project-specific (redundant archives, kept on disk but not in git) ---
+/simple_version.zip
+/full_version.zip
+/cse_student_performance_1200.csv
